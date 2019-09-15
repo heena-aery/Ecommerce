@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+    body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0px;
+    }
+
+    .main-div{
+        box-shadow: 2px 2px lightgrey;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+    }
+    .menu-item{
+    display: inline-block;
+    list-style-type: none;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 16px;
+    }
+
+    #title{
+        font-size: 20px;
+    }
+
+    #textbox-span{
+    width: 290px;
+    background-color: #f2f2f2;
+    font-size: 14px;
+    height: 26px;
+    border: none;
+    color: #222;
+    margin-right: 70px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 70px;
+    border-radius: 9px;
+    padding: 10px; 
+    width: 200px;
+    }
+
+    #textbox{
+    width: 290px;
+    background-color: #f2f2f2;
+    font-size: 12px;
+    padding: 1px 2px;
+    border: none;
+    color: #222;
+    margin-right: 70px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    outline: none;
+    }
+
+    .menu-item menu-link{
+        text-align: left;
+        
+    }
+
+    .fa{
+        font-size: 20px;
+    }
+    .fa-shopping-cart{
+        margin-top: -25px
+    }
+
+    #cart-count{
+background-color: rgb(4, 110, 114);
+color: white;
+position:absolute;
+top: 20px;
+border-radius: 55%;
+text-align: center;
+font-size: 12px;
+}
+
+
+
+    #Profile{
+     height: 40px;
+     width: 40px;
+    margin-left: 36px;
+    margin-top: 15px;
+
+    }
+
+    #icons-span{
+        float:right;
+        margin-top: -20px;
+    }
+
+    #order-image{
+        width:300px;
+        height: 400px;
+        margin-left: 500px;
+}
+
+#Order-confirm{
+    text-align: center;
+    margin-top: 5px;
+}
+
+#order-contnt{
+    text-align: center;
+    margin-top: 5px;
+}
+
+    #footer-div{
+        width: 100%;
+        background-color: black;
+    }
+
+    #table{
+        width: 100%;
+        color: white;
+        text-align: center; 
+        border-spacing: 12px;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+</style>
+<body>
+<div Class="main-div">
+    <li class="menu-item" id="title"><b>SHOPE</b>LANE</li>
+    <li class="menu-item ">CLOTHING</li>
+    <li class="menu-item ">ACCESORIES</li>
+    <span id="textbox-span"><i class="fa fa-search"></i><input type="text" placeholder="Search for clothing and Accessories" class="menu-item" id="textbox"/>
+    </span>
+    <span id="icons-span">
+            <a href="Checkout-Pgae.html"><i class="fa fa-shopping-cart"></i></a>
+            <span id="cart-count"></span>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB8LUi-C5Ylh194rtkIKF3f-qnu1mQoCfKoHjmDVVmGnCihqQ3" id="Profile" alt="Profile"/>
+    </span>
+</div>
+
+<div>
+    <img src="https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png" id="order-image" alt="tick-img"/>
+    <h1 id="Order-confirm"> Order Placed Successfully!!</h1>
+    <p id="order-contnt">We have sent you an Email with the order details</p>
+    
+    </div>
+
+<div id="footer-div">
+<table id="table">
+<tr>
+    <th>ONLINE STORE</th>
+    <th>HELPFUL LINKS</th>
+    <th>PARTNERS</th>
+    <th>ADDRESS</th>
+</tr>
+
+<tr>
+<td>MEN CLOTHING</td>
+<td>HOME</td>
+<td>ZARA</td>
+<td>BUILDING 101</td>
+</tr>
+
+<tr>
+    <td>WOMEN CLOTHING</td>
+    <td>ABOUT</td>
+    <td>PANTALOONS</td>
+    <td>CENTRAL AVENUE</td>
+</tr>
+
+<tr>
+    <td>MEN ACCESORIES</td>
+    <td>CONTACT</td>
+    <td>LEVIS</td>
+    <td>LA-902722</td>
+</tr>
+
+<tr>
+    <td>WOMEN ACCESORIES</td>
+    <td></td>
+    <td>UCB</td>
+    <td>UNITED STATES</td>
+</tr>
+
+<tr>
+    <td></td>
+    <td></td>
+    <td>+ MANY MORE</td>
+    <td></td>
+</tr>
+
+</table>
+
+
+</div>
+
+
+</body>
+
+
+
+</html>

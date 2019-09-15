@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+    body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0px;
+    }
+
+    .main-div{
+        box-shadow: 2px 2px lightgrey;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+    }
+    .menu-item{
+    display: inline-block;
+    list-style-type: none;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 16px;
+    }
+
+    #title{
+        font-size: 20px;
+    }
+
+    #textbox-span{
+    width: 290px;
+    background-color: #f2f2f2;
+    font-size: 14px;
+    height: 26px;
+    border: none;
+    color: #222;
+    margin-right: 70px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 70px;
+    border-radius: 9px;
+    padding: 10px; 
+    width: 200px;
+    }
+
+    #textbox{
+    width: 290px;
+    background-color: #f2f2f2;
+    font-size: 12px;
+    padding: 1px 2px;
+    border: none;
+    color: #222;
+    margin-right: 70px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    outline: none;
+    }
+
+    .menu-item menu-link{
+        text-align: left;
+        
+    }
+
+    #cover-img{
+     width: 100%;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    margin-top: 15px;
+    }
+
+    .fa{
+        font-size: 20px;
+    }
+    .fa-shopping-cart{
+        margin-top: -25px
+    }
+    #cart-count{
+background-color: rgb(4, 110, 114);
+color: white;
+position:absolute;
+top: 20px;
+border-radius: 55%;
+text-align: center;
+font-size: 12px;
+}
+
+
+    #Profile{
+     height: 40px;
+     width: 40px;
+    margin-left: 36px;
+    margin-top: 15px;
+
+    }
+
+    #icons-span{
+        float:right;
+        margin-top: -20px;
+    }
+
+    #footer-div{
+        width: 100%;
+        background-color: black;
+    }
+
+    #table{
+        width: 80%;
+        color: white;
+        text-align: center; 
+        border-spacing: 12px;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        margin-left: 50px;
+    }
+    .detail{
+        width: 15%;
+        font-size: 14px;
+        border:none;
+        display: inline-block;
+        padding: 55px;
+        margin: 50px;
+        margin-left: 55px;
+        box-shadow: 5px;
+        margin-bottom: 40px;
+    }
+
+    #project-logo{
+        height: 10px;
+        width: 20px;
+       align :left;
+    }
+
+    .item{
+        border:1px solid grey;
+        padding:10px;
+    }
+    .preview-img{
+    height: 70px;
+    width: 50px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+}
+button {
+  margin-top: 20px;
+  line-height: 40px;
+  font-weight: bold;
+  float: left;
+  background: rgb(4, 110, 114);
+  border: none;
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+button:hover {
+  background:rgb(4, 110, 114);
+}
+.img{
+        width: 90%;
+        height: 250px;
+        display: block;
+        padding: 5px;
+        box-shadow: 5px;
+         }
+         .img:link{
+             text-decoration: none;
+         }
+    .name{
+        font-size: 12px;
+        margin-bottom: 10px;
+}
+.brand{
+    font-size: 10px;
+    margin-bottom: 10px;
+    color: grey;
+}
+.price{
+    font-size: 12px;
+    color: rgb(6, 185, 245);
+    font-weight: bold;
+}
+
+</style>
+<body>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<div Class="main-div">
+    <li class="menu-item" id="title"><b>SHOPE</b>LANE</li>
+    <li class="menu-item ">CLOTHING</li>
+    <li class="menu-item ">ACCESORIES</li>
+    <span id="textbox-span"><i class="fa fa-search"></i><input type="text" placeholder="Search for clothing and Accessories" class="menu-item" id="textbox"/>
+    </span>
+    <span id="icons-span">
+            <a href="Checkout-Pgae.html"><i class="fa fa-shopping-cart"></i></a>
+            <span id="cart-count"></span>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB8LUi-C5Ylh194rtkIKF3f-qnu1mQoCfKoHjmDVVmGnCihqQ3" id="Profile" alt="Profile"/>
+    </span>
+</div>
+<div id="Checkout">
+    
+</div>
+
+<div id="footer-div">
+<table id="table">
+<tr>
+    <th>ONLINE STORE</th>
+    <th>HELPFUL LINKS</th>
+    <th>PARTNERS</th>
+    <th>ADDRESS</th>
+</tr>
+
+<tr>
+<td>MEN CLOTHING</td>
+<td>HOME</td>
+<td>ZARA</td>
+<td>BUILDING 101</td>
+</tr>
+
+<tr>
+    <td>WOMEN CLOTHING</td>
+    <td>ABOUT</td>
+    <td>PANTALOONS</td>
+    <td>CENTRAL AVENUE</td>
+</tr>
+
+<tr>
+    <td>MEN ACCESORIES</td>
+    <td>CONTACT</td>
+    <td>LEVIS</td>
+    <td>LA-902722</td>
+</tr>
+
+<tr>
+    <td>WOMEN ACCESORIES</td>
+    <td></td>
+    <td>UCB</td>
+    <td>UNITED STATES</td>
+</tr>
+
+<tr>
+    <td></td>
+    <td></td>
+    <td>+ MANY MORE</td>
+    <td></td>
+</tr>
+
+</table>
+
+<span id="project-logo"><img src="https://i.imgur.com/OKAY6Fl.png"></span>
+</div>
+
+
+</body>
+<script>
+    var data=[];
+$(document).ready(function(){
+
+    var keys = Object.keys(localStorage);
+    for (var i = 0; i < keys.length; i++) {
+        var item=localStorage.getItem(keys[i]);
+        data.push(item);
+    }
+
+
+    var checkoutDiv=document.getElementById('Checkout');
+var mainDiv=document.createElement('div');
+ mainDiv.className='detail';
+
+ var leftDiv=document.createElement('div');
+ leftDiv.className='img';
+
+ for(var i=0;i<data.length;i++)
+{
+    debugger;
+    var keyItem=JSON.parse(data[i]);
+ var preview=document.createElement('div');
+ preview.className='item';
+    var image=document.createElement('img');
+    image.src=keyItem.preview;
+image.className='preview-img';
+
+var name=document.createElement('div');
+ name.className='name';
+ var nameNode=document.createTextNode(keyItem.name);
+name.appendChild(nameNode);
+debugger;
+var price=document.createElement('div');
+price.className='price';
+var prceNode=document.createTextNode('Price:');
+ var rsNode=document.createTextNode('Rs.');
+ var priceNode=document.createTextNode(keyItem.price);
+ price.appendChild(prceNode);
+ price.appendChild(rsNode);
+price.appendChild(priceNode);
+
+
+    preview.appendChild(image);
+    preview.appendChild(name);
+    preview.appendChild(price);
+leftDiv.appendChild(preview);
+
+
+}
+
+
+
+ 
+var rightDiv=document.createElement('div');
+rightDiv.className='total-amount';
+
+//  var name=document.createElement('div');
+//  name.className='name';
+//  var nameNode=document.createTextNode('A');
+// name.appendChild(nameNode);
+ var price=document.createElement('div');
+price.className='price';
+ 
+var button = document.createElement("button");
+        button.innerHTML = "Place Order";
+        
+        button.addEventListener("click", function incrementValue() {
+            localStorage.clear();
+            //document.getElementById('cart-count').innerHTML=0;
+            window.location.href='Order-Confirmationpage.html';
+        })
+       
+        rightDiv.appendChild(button);
+
+//rightDiv.appendChild(name);
+
+rightDiv.appendChild(price);
+rightDiv.appendChild(button);
+
+
+
+
+ mainDiv.appendChild(leftDiv);
+ mainDiv.appendChild(rightDiv);
+
+ checkoutDiv.appendChild(mainDiv);
+});
+
+ 
+</script>
+
+
+
+</html>

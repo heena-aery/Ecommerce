@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css"/>
+	
+</head>
+<style>
+    body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0px;
+    }
+
+    .main-div{
+        box-shadow: 2px 2px lightgrey;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+    }
+    .menu-item{
+    display: inline-block;
+    list-style-type: none;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 16px;
+    }
+
+    #title{
+        font-size: 20px;
+    }
+
+    #textbox-span{
+    width: 290px;
+    background-color: #f2f2f2;
+    font-size: 14px;
+    height: 26px;
+    border: none;
+    color: #222;
+    margin-right: 70px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 70px;
+    border-radius: 9px;
+    padding: 10px; 
+    width: 200px;
+    }
+
+    #textbox{
+    width: 290px;
+    background-color: #f2f2f2;
+    font-size: 12px;
+    padding: 1px 2px;
+    border: none;
+    color: #222;
+    margin-right: 70px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    outline: none;
+    
+    }
+
+    .menu-item menu-link{
+        text-align: left;
+        
+    }
+
+    #cover-img{
+     width: 100%;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    margin-top: 15px;
+    }
+
+    .fa{
+        font-size: 20px;
+    }
+    .fa-shopping-cart{
+        margin-top: -25px
+    }
+
+
+
+    #Profile{
+     height: 40px;
+     width: 40px;
+    margin-left: 36px;
+    margin-top: 15px;
+
+    }
+
+    #icons-span{
+        float:right;
+        margin-top: -20px;
+    }
+
+    #footer-div{
+        width: 100%;
+        background-color: black;
+    }
+
+    #table{
+        width: 100%;
+        color: white;
+        text-align: center; 
+        border-spacing: 12px;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    .img{
+        width: 15%;
+        height: 40%;
+        float: left;
+        margin-left: 50px;
+        margin-bottom: 30px;
+        margin-right: 100px;
+        margin-top: 15px;
+
+
+    }
+    .name{
+        font-size: 24px;
+        font-weight: bold;
+        margin-right: 30px;
+        margin-top: 25px;
+        
+}
+.brand{
+    font-size: 12px;
+    font-weight: bold;
+    margin: 35px;
+    color: gray;
+}
+
+.price{
+    font-size: 12px;
+    font-weight: bold;
+    margin: 35px;
+    color: gray;
+}
+.description{
+    font-size: 12px;
+    font-weight: bold;
+    margin: 35px;
+    color: gray;
+}
+.preview-img{
+    height: 70px;
+    width: 50px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+}
+button {
+  margin-top: 20px;
+  line-height: 40px;
+  font-weight: bold;
+  padding: 0 40px;
+  background: rgb(4, 110, 114);
+  border: none;
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+button:hover {
+  background:rgb(4, 110, 114);
+}
+
+#cart-count{
+background-color: rgb(4, 110, 114);
+color: white;
+position:absolute;
+top: 20px;
+border-radius: 55%;
+text-align: center;
+font-size: 12px;
+}
+#Buy{
+    cursor:pointer;
+}
+</style>
+<body>
+<div Class="main-div">
+    <li class="menu-item" id="title"><b>SHOPE</b>LANE</li>
+    <li class="menu-item ">CLOTHING</li>
+    <li class="menu-item ">ACCESORIES</li>
+    <span id="textbox-span"><i class="fa fa-search"></i><input type="text" placeholder="Search for clothing and Accessories" class="menu-item" id="textbox"/>
+    </span>
+    <span id="icons-span">
+            <a href="Checkout-Pgae.html"><i class="fa fa-shopping-cart"></i></a>
+            <span id="cart-count"></span>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB8LUi-C5Ylh194rtkIKF3f-qnu1mQoCfKoHjmDVVmGnCihqQ3" id="Profile" alt="Profile"/>
+    </span>
+
+</div>
+  <div id="users">
+
+</div>
+
+<div id="footer-div">
+<table id="table">
+<tr>
+    <th>ONLINE STORE</th>
+    <th>HELPFUL LINKS</th>
+    <th>PARTNERS</th>
+    <th>ADDRESS</th>
+</tr>
+
+<tr>
+<td>MEN CLOTHING</td>
+<td>HOME</td>
+<td>ZARA</td>
+<td>BUILDING 101</td>
+</tr>
+
+<tr>
+    <td>WOMEN CLOTHING</td>
+    <td>ABOUT</td>
+    <td>PANTALOONS</td>
+    <td>CENTRAL AVENUE</td>
+</tr>
+
+<tr>
+    <td>MEN ACCESORIES</td>
+    <td>CONTACT</td>
+    <td>LEVIS</td>
+    <td>LA-902722</td>
+</tr>
+
+<tr>
+    <td>WOMEN ACCESORIES</td>
+    <td></td>
+    <td>UCB</td>
+    <td>UNITED STATES</td>
+</tr>
+
+<tr>
+    <td></td>
+    <td></td>
+    <td>+ MANY MORE</td>
+    <td></td>
+</tr>
+
+</table>
+
+
+</div>
+
+
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.img-slide').slick({
+        dots: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  
+});
+
+var keys=Object.keys(localStorage);
+document.getElementById('cart-count').value=keys.length;
+var id=location.search.split('=')[1];
+$.get('https://5d76bf96515d1a0014085cf9.mockapi.io/product/'+id,function(data,status){
+   
+    var usersDiv=document.getElementById('users');
+    
+
+var mainDiv=document.createElement('div');
+ mainDiv.className='detail';
+
+ var leftDiv=document.createElement('div');
+ mainDiv.className='img';
+
+ var leftDiv=document.createElement('div');
+ var image=document.createElement('img');
+ image.className='img';
+image.src=data.preview;
+leftDiv.appendChild(image);
+
+var rightDiv=document.createElement('div');
+ mainDiv.className='title';
+
+ var name=document.createElement('div');
+ name.className='name';
+ var nameNode=document.createTextNode(data.name);
+name.appendChild(nameNode);
+
+var brand=document.createElement('div');
+brand.className='brand';
+ var brandNode=document.createTextNode(data.brand);
+ brand.appendChild(brandNode);
+
+ var price=document.createElement('div');
+price.className='price';
+var prceNode=document.createTextNode('Price:');
+ var rsNode=document.createTextNode('Rs.');
+ var priceNode=document.createTextNode(data.price);
+ price.appendChild(prceNode);
+ price.appendChild(rsNode);
+price.appendChild(priceNode);
+
+var description=document.createElement('div');
+description.className='description';
+var descNode=document.createTextNode('Description');
+description.appendChild(descNode);
+var para=document.createElement('p');
+para.className='description';
+ var descriptionNode=document.createTextNode(data.description);
+ description.appendChild(descNode);
+ para.appendChild(descriptionNode);
+//code for preview
+ var preview=document.createElement('div');
+ preview.className='preview';
+for(var i=0;i<data.photos.length;i++)
+{
+    var image=document.createElement('img');
+    image.src=data.photos[i];
+image.className='preview-img'
+    preview.appendChild(image);
+}
+
+ 
+     var button=Button(data);
+rightDiv.appendChild(button);
+
+rightDiv.appendChild(name);
+rightDiv.appendChild(brand);
+rightDiv.appendChild(price);
+rightDiv.appendChild(description);
+rightDiv.appendChild(para);
+rightDiv.appendChild(preview);
+rightDiv.appendChild(button);
+
+
+
+
+ usersDiv.appendChild(leftDiv);
+ usersDiv.appendChild(rightDiv);
+
+});
+	
+  });
+
+  function Button(data)
+  {
+    var button = document.createElement("button");
+        button.innerHTML = "Add to Cart";
+        button.id='Buy';
+        button.addEventListener("click", function incrementValue() {
+            // var value = parseInt(document.getElementById('cart-count').innerHTML);
+            // value = isNaN(value) ? 0 : value;
+            // value++;
+            debugger;
+            localStorage.setItem(data.id,JSON.stringify(data));
+            
+            var keys=Object.keys(localStorage);
+            document.getElementById('cart-count').innerHTML = keys.length;
+        })
+
+        return button;
+  }
+ 
+</script>
+
+
+
+</html>
