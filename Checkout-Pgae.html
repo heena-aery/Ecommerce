@@ -117,15 +117,15 @@ font-size: 12px;
         margin-left: 50px;
     }
     .detail{
-        width: 15%;
-        font-size: 14px;
-        border:none;
-        display: inline-block;
-        padding: 55px;
-        margin: 50px;
-        margin-left: 55px;
-        box-shadow: 5px;
-        margin-bottom: 40px;
+        width: 90%;
+    font-size: 14px;
+    border: none;
+    display: inline-block;
+    padding: 30px;
+    margin: 50px;
+    /* margin-left: 55px; */
+    box-shadow: 5px;
+    margin-bottom: 40px;
     }
 
     #project-logo{
@@ -135,28 +135,27 @@ font-size: 12px;
     }
 
     .item{
-        border:1px solid grey;
-        padding:10px;
+        float: left;
     }
+.item-details{
+    display: inline-block;
+}
+
     .preview-img{
-    height: 70px;
-    width: 50px;
+        height: 90px;
+    width: 70px;
     margin-right: 10px;
-    margin-bottom: 25px;
 }
 button {
-  margin-top: 20px;
-  line-height: 40px;
+  margin: 25px;
   font-weight: bold;
   float: left;
-  background: rgb(4, 110, 114);
+  background: rgb(5, 165, 170);
   border: none;
-  margin-bottom: 25px;
   border-radius: 5px;
+  padding: 12px 20px;
 }
-button:hover {
-  background:rgb(4, 110, 114);
-}
+
 .img{
         width: 90%;
         height: 250px;
@@ -168,7 +167,8 @@ button:hover {
              text-decoration: none;
          }
     .name{
-        font-size: 12px;
+        font-size: 13px;
+        font-weight: bold;
         margin-bottom: 10px;
 }
 .brand{
@@ -181,7 +181,33 @@ button:hover {
     color: rgb(6, 185, 245);
     font-weight: bold;
 }
+.total-price{
+    font-size: 15px;
+    font-weight: bold;
+}
+.product-cart-div{
+    float: left;
+    width: 100%;
+    border:1px solid lightgray;
+        box-shadow: 0px 1px 1px 1px lightgray;
+        padding:10px;
+        margin-bottom: 10px;
+}
 
+.total-amount{
+    border:1px solid lightgray;
+float: right;
+width: 55%;
+box-shadow: 0px 1px 1px 1px lightgray;
+padding: 10px;
+}
+.total-amount h2{
+    margin-top: 0px;
+}
+#checkout-detail{
+    float: left;
+    width: 40%;
+}
 </style>
 <body>
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -269,11 +295,14 @@ var mainDiv=document.createElement('div');
  mainDiv.className='detail';
 
  var leftDiv=document.createElement('div');
- leftDiv.className='img';
+ leftDiv.id='checkout-detail';
+//  leftDiv.className='img';
+//  leftDiv.className='product-cart-div';
 
  for(var i=0;i<data.length;i++)
 {
-    debugger;
+    var containerDiv=document.createElement('div');
+    containerDiv.className='product-cart-div';
     var keyItem=JSON.parse(data[i]);
  var preview=document.createElement('div');
  preview.className='item';
@@ -285,11 +314,13 @@ var name=document.createElement('div');
  name.className='name';
  var nameNode=document.createTextNode(keyItem.name);
 name.appendChild(nameNode);
+var count=document.createElement('div');
+count.innerHTML='x'+keyItem.count;
 debugger;
 var price=document.createElement('div');
 price.className='price';
-var prceNode=document.createTextNode('Price:');
- var rsNode=document.createTextNode('Rs.');
+var prceNode=document.createTextNode('Amount: ');
+ var rsNode=document.createTextNode('Rs ');
  var priceNode=document.createTextNode(keyItem.price);
  price.appendChild(prceNode);
  price.appendChild(rsNode);
@@ -297,11 +328,16 @@ price.appendChild(priceNode);
 
 
     preview.appendChild(image);
-    preview.appendChild(name);
-    preview.appendChild(price);
-leftDiv.appendChild(preview);
 
+    var previewContent=document.createElement('div');
+    previewContent.className='item-details';
+    previewContent.appendChild(name);
+    previewContent.appendChild(count);
+    previewContent.appendChild(price);
+    containerDiv.appendChild(preview);
+    containerDiv.appendChild(previewContent);
 
+    leftDiv.appendChild(containerDiv);
 }
 
 
@@ -310,12 +346,19 @@ leftDiv.appendChild(preview);
 var rightDiv=document.createElement('div');
 rightDiv.className='total-amount';
 
-//  var name=document.createElement('div');
-//  name.className='name';
-//  var nameNode=document.createTextNode('A');
-// name.appendChild(nameNode);
- var price=document.createElement('div');
-price.className='price';
+var totalAmount=document.createElement('h2');
+totalAmount.innerHTML='Total Amount';
+
+var price=document.createElement('div');
+var prceNode=document.createTextNode('Amount: ');
+ var rsNode=document.createTextNode('Rs ');
+ var amount=document.createElement('span');
+ amount.className='total-price';
+ var priceNode=document.createTextNode(keyItem.price);
+ amount.appendChild(priceNode);
+ price.appendChild(prceNode);
+ price.appendChild(rsNode);
+price.appendChild(amount);
  
 var button = document.createElement("button");
         button.innerHTML = "Place Order";
@@ -325,7 +368,8 @@ var button = document.createElement("button");
             //document.getElementById('cart-count').innerHTML=0;
             window.location.href='Order-Confirmationpage.html';
         })
-       
+        rightDiv.appendChild(totalAmount);
+        rightDiv.appendChild(price);
         rightDiv.appendChild(button);
 
 //rightDiv.appendChild(name);
