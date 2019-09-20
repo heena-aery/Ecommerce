@@ -111,17 +111,7 @@
         padding-bottom: 10px;
     }
 
-    .img{
-        width: 15%;
-        height: 40%;
-        float: left;
-        margin-left: 50px;
-        margin-bottom: 30px;
-        margin-right: 100px;
-        margin-top: 15px;
-
-
-    }
+    
     .name{
         font-size: 24px;
         font-weight: bold;
@@ -176,10 +166,37 @@ top: 20px;
 border-radius: 55%;
 text-align: center;
 font-size: 12px;
+padding: 0px 2px;
 }
 #Buy{
     cursor:pointer;
 }
+.img {
+    width: 90%;
+    height: 90%;
+    float: left;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    margin-right: 100px;
+    margin-top: 15px;
+}
+.img-div {
+    width: 30%;
+    float: left;
+}
+
+.product-detail-div {
+    width: 60%;
+    float: right;
+} 
+#users{
+    height: 90vh;
+}
+.highlight{ 
+    border: 2px solid green; 
+    }
+
+
 </style>
 <body>
 <div Class="main-div">
@@ -190,7 +207,7 @@ font-size: 12px;
     </span>
     <span id="icons-span">
             <a href="Checkout-Pgae.html"><i class="fa fa-shopping-cart"></i></a>
-            <span id="cart-count"></span>
+            <span id="cart-count">0</span>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB8LUi-C5Ylh194rtkIKF3f-qnu1mQoCfKoHjmDVVmGnCihqQ3" id="Profile" alt="Profile"/>
     </span>
 
@@ -265,8 +282,13 @@ $(document).ready(function(){
   
 });
 
+var totalcount=0;
 var keys=Object.keys(localStorage);
-document.getElementById('cart-count').value=keys.length;
+            for (var i = 0; i < keys.length; i++) {
+                var item=JSON.parse(localStorage.getItem(keys[i]));
+                totalcount+=item.count;
+    }
+    document.getElementById('cart-count').innerHTML = totalcount; 
 var id=location.search.split('=')[1];
 $.get('https://5d76bf96515d1a0014085cf9.mockapi.io/product/'+id,function(data,status){
    
@@ -280,12 +302,14 @@ var mainDiv=document.createElement('div');
  mainDiv.className='img';
 
  var leftDiv=document.createElement('div');
+ leftDiv.className='img-div';
  var image=document.createElement('img');
  image.className='img';
 image.src=data.preview;
 leftDiv.appendChild(image);
 
 var rightDiv=document.createElement('div');
+rightDiv.className='product-detail-div';
  mainDiv.className='title';
 
  var name=document.createElement('div');
@@ -325,7 +349,19 @@ for(var i=0;i<data.photos.length;i++)
     image.src=data.photos[i];
 image.className='preview-img'
     preview.appendChild(image);
-}
+
+    image.onclick=function(e){
+        $('img.preview-img').not(e.target).removeClass('highlight');
+        $(this).toggleClass('highlight');
+        //e.target.style.border="2px solid green";
+        var mainimg=document.getElementsByClassName('img');
+        console.log($(this));
+        mainimg[0].src=$(this)[0].currentSrc;
+
+    }
+
+    
+    }
 
  
      var button=Button(data);
